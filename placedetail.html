@@ -17,17 +17,17 @@
         geocode();
         function geocode() { 
             var location='dombivli maharashtra';
-            axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+            axios.get('https://maps.googleapis.com/maps/api/geocode/json',{  /*this fetch data fom api*/
                 params:{
                     address:location,
                     key:'AIzaSyCTWaBw-IUij53qmsqS57h5u2RF-6Pt8GE'
                 }
             })
-            .then(function (response) {
+            .then(function (response) {     /* this accepts the data fethed ny axios aand shows results  */ 
                 console.log(response);
             })
             .catch(function (error) {
-                console.log(error);
+                console.log(error);      /*js exception only has catch not throw try*/
             });
          }
         
